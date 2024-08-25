@@ -1,20 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title class="app-title">SkeletonAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="home-container">
+    <h1 class="welcome-title">Bienvenido!</h1>
+    <p class="user-info">Usuario: admin</p>
+    <h2 class="info-title">Información Adicional</h2>
+    
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="firstName"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input [(ngModel)]="lastName"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Nivel Educación</ion-label>
+      <ion-select [(ngModel)]="educationLevel" interface="popover">
+        <ion-select-option value="secundaria">Secundaria</ion-select-option>
+        <ion-select-option value="universidad">Universidad</ion-select-option>
+        <ion-select-option value="tecnico">Técnico</ion-select-option>
+        <ion-select-option value="maestria">Maestría</ion-select-option>
+        <ion-select-option value="doctorado">Doctorado</ion-select-option>
+        <ion-select-option value="diplomado">Diplomado</ion-select-option>
+        <ion-select-option value="certificacion">Certificación</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Fecha Nacimiento</ion-label>
+      <ion-datetime 
+        displayFormat="DD/MM/YYYY" 
+        pickerFormat="DD MMM YYYY"
+        [(ngModel)]="birthDate" 
+        placeholder="Selecciona tu fecha de nacimiento"
+        class="datetime-small"
+      ></ion-datetime>
+    </ion-item>
+    
+    
+    <div class="button-group">
+      <ion-button expand="full" (click)="onClear()" color="light">Limpiar</ion-button>
+      <ion-button expand="full" (click)="onShow()" color="primary">Mostrar</ion-button>
+    </div>
   </div>
+
+  <footer class="footer">
+    <p>App desarrollada por</p>
+  </footer>
 </ion-content>

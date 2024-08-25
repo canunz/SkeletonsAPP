@@ -1,0 +1,30 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .welcome-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .signup-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #3880ff; /* Color azul predeterminado de Ionic */
+  }
+  
